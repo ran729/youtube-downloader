@@ -56,9 +56,10 @@ class TodoItem extends Component {
               onDoubleClick={this.handleDoubleClick}>
               {todo.snippet.title}
             </label>
-            <button>
+            <div class="buttons-container">
                 <a download href={'download/'+todo.id.videoId}>Download</a>
-            </button>
+                <a target="_blank" href={'http://www.youtube.com/watch?v='+todo.id.videoId}>Watch</a>
+            </div>
             </div>
         </div>
       );

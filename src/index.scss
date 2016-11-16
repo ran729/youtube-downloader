@@ -19,7 +19,10 @@ body {
 	display:inline-block!important;
 	width: 55%;
 }
-
+.todo-list .buttons-container {
+	width: 30%;
+	display: inline-block;
+}
 .todo-list li a {
 	float:right;
 	color: #4d4d4d;
