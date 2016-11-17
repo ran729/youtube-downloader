@@ -57,7 +57,7 @@ class TodoItem extends Component {
               {todo.snippet.title}
             </label>
             <div class="buttons-container">
-                <a download href={'download/'+todo.id.videoId}>Download</a>
+                <a download href={'http://localhost:8080/video/'+todo.id.videoId}>Download</a>
                 <a target="_blank" href={'http://www.youtube.com/watch?v='+todo.id.videoId}>Watch</a>
             </div>
             </div>

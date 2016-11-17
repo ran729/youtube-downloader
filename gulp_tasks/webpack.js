@@ -5,6 +5,13 @@ const webpack = require('webpack');
 const webpackConf = require('../conf/webpack.conf');
 const webpackDistConf = require('../conf/webpack-dist.conf');
 const gulpConf = require('../conf/gulp.conf');
+const exec = require('child_process').exec;
+
+gulp.task('api-server', done => {
+   exec('node src/api/server.js', function (err, stdout, stderr) {
+      done(err);
+  });
+});
 
 gulp.task('webpack:dev', done => {
   webpackWrapper(false, webpackConf, done);
