@@ -4,12 +4,12 @@ import TodoTextInput from './TodoTextInput';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.handleSave = this.handleSave.bind(this);
+    this.search = this.search.bind(this);
   }
 
-  handleSave(text) {
+  search(text) {
     if (text.length !== 0) {
-      this.props.addTodo(text);
+      this.props.search(text);
     }
   }
 
@@ -19,7 +19,7 @@ class Header extends Component {
         <h1>Youtube Downloader</h1>
         <TodoTextInput
           newTodo
-          onSave={this.handleSave}
+          onSave={this.search}
           placeholder="Search youtube videos"
           />
       </header>
@@ -28,7 +28,7 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  addTodo: PropTypes.func.isRequired
+  search: PropTypes.func.isRequired
 };
 
 export default Header;

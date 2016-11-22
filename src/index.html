@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Redux TodoMVC</title>
+    <title>Youtube Downloader</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
@@ -14,23 +14,22 @@
 
     <div class="todoapp" id="root"></div>
     <script src="https://apis.google.com/js/api.js"></script>
-<script>
-  function start() {
-    // 2. Initialize the JavaScript client library.
-    gapi.client.init({
-      'apiKey': 'AIzaSyBUa97NADRVTOzDj-RbpgEv3-ZMmaQQYSY',
-      'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
-      // clientId and scope are optional if auth is not required.
-      'clientId': 'youtube-downloader.apps.googleusercontent.com',
-      'scope': 'profile',
-    });
+    <script>
+      function start() {
+        // 2. Initialize the JavaScript client library.
+        gapi.client.init({
+          'apiKey': 'AIzaSyBUa97NADRVTOzDj-RbpgEv3-ZMmaQQYSY',
+          'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
+          // clientId and scope are optional if auth is not required.
+          'clientId': 'youtube-downloader.apps.googleusercontent.com',
+          'scope': 'profile',
+        });
 
-    gapi.client.load('youtube', 'v3');
-  }
-  // 1. Load the JavaScript client library.
-  gapi.load('client', start);
+        gapi.client.load('youtube', 'v3');
+      }
+      // 1. Load the JavaScript client library.
+      gapi.load('client', start);
 
-</script>
-    
+    </script>
   </body>
 </html>

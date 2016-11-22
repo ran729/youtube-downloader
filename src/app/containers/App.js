@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <Header
-          addTodo={actions.search}
+          search={actions.search}
           />
         <MainSection
           todos={todos}

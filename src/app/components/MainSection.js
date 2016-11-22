@@ -13,11 +13,7 @@ class MainSection extends Component {
     const activeCount = todos.length;
 
     if (todos.length) {
-      return (
-        <Footer
-          activeCount={activeCount}
-          />
-      );
+      return <Footer activeCount={activeCount} />;
     }
   }
 

@@ -11,8 +11,8 @@ function respond(req, res, next) {
 	  						.replace('Destination: ', '')
 	  						.replace(__dirname+'/', '')
 	  						 + '.mp3';
-  			console.log('video name :' + videoname);	
-	  		res.header('Content-disposition', 'attachment; filename=' + videoname);
+
+	  		res.header('Content-disposition', 'attachment; filename=' + encodeURI(decodeURI(videoname)));
 
 	  		var filestream = fs.readFile(__dirname + '/' + videoname, function (err,data){
 		  		try {
